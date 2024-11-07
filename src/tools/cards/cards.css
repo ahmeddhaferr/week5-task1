@@ -1,0 +1,176 @@
+* {
+  text-decoration: none;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  gap: 16px;
+}
+#Steel_Blue {
+  display: none;
+}
+#Steel_Blue1 {
+  display: none;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:active,
+.card:focus {
+  border: 1px solid #3c97af;
+  background-color: #ecf6f9;
+
+  #black {
+    display: none;
+  }
+  #black1 {
+    display: none;
+  }
+  #Steel_Blue {
+    display: block;
+  }
+  #Steel_Blue1 {
+    display: block;
+  }
+}
+.card {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 165px;
+  border-radius: 16px;
+  border: 1px solid #ebebeb;
+  opacity: 0px;
+  background-color: white;
+}
+.par h3 {
+  margin-top: 16px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+  text-align: center;
+}
+.par p {
+  margin-top: 4px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #999999;
+}
+.card img {
+  margin-top: 24px;
+}
+
+.btnnn {
+  margin-top: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 18px;
+}
+
+.p1 {
+  font-family: Exo;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #999999;
+}
+
+.show {
+  margin-top: 100px;
+  display: flex;
+  background-color: #3c97af;
+  cursor: pointer;
+
+  .p1 {
+    font-family: Exo;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+@media (max-width: 660px) {
+  .box {
+    margin-top: 32px;
+    flex-direction: column;
+    max-width: 460px;
+  }
+  .card {
+    gap: 10px;
+    height: 90px;
+    width: 460px;
+    flex-direction: row;
+  }
+  .par {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+  }
+  .par h3 {
+    margin-top: 0;
+  }
+  #black {
+    margin-top: 0;
+  }
+  #black1 {
+    margin-top: 0;
+  }
+  #Steel_Blue {
+    margin-top: 0;
+  }
+  #Steel_Blue1 {
+    margin-top: 0;
+  }
+
+  .btnnn {
+    margin-top: 100px;
+    width: 460px;
+  }
+  .show{
+    margin-top: 100px;
+    width: 460px;
+  }
+}
+
+@media (max-width: 460px) {
+  .box {
+    margin-top: 32px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card {
+    width: 380px;
+  }
+  .par p {
+    text-align: left;
+  }
+
+  .btnnn {
+    margin-top: 100px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .show {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 380px;
+  }
+}
