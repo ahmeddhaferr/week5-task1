@@ -1,4 +1,4 @@
-.line {
+.line1 {
     margin: auto;
     margin-top: 80px;
     width: 196px;
@@ -10,18 +10,18 @@
   #on {
     background-color: #3c97af;
   }
-  .flex {
+  .flex1 {
     gap: 5px;
     display: flex;
   }
 
   @media (max-width:660px){
-    .flex {
+    .flex1 {
       max-width: 460px;
     }
   }
   @media (max-width:460px){
-    .flex {
+    .flex1 {
       max-width: 380px;
     }
   }

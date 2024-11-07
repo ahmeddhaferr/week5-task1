@@ -3,14 +3,14 @@ import "./lines2.css"
 
 export default function lines2() {
   return (
-    <div className='flex'>
-        <div className="line" id="on"></div>
+    <div className='flex2'>
+        <div className="line2" id="on"></div>
         <div className='row'>
-        <div className="line1" id='on'></div>
-        <div className="line_1" ></div>
+        <div className="line11" id='on'></div>
+        <div className="line_11" ></div>
         
         </div>
-        <div className="line"></div>
+        <div className="line2"></div>
     </div>
   )
 }

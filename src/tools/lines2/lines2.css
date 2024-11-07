@@ -1,4 +1,4 @@
-.line {
+.line2 {
     margin: auto;
     margin-top: 80px;
     width: 196px;
@@ -6,7 +6,7 @@
     background-color: #ebebeb;
     border-radius: 15px;
   }
-  .line1 {
+  .line11 {
     z-index: 1;
     margin: auto;
     margin-top:80px;
@@ -15,7 +15,7 @@
     background-color: #ebebeb;
     border-radius: 15px;
   }
-  .line_1 {
+  .line_11 {
     margin: auto;
     margin-top: 80px;
     margin-left: -4px;
@@ -30,15 +30,16 @@
   #on {
     background-color: #3c97af;
   }
-  .flex {
+  .flex2 {
     gap: 5px;
     display: flex;
   }
 
   @media (max-width:660px) {
   
-    .flex{
-      margin: auto;
+    .flex2{
+     margin-left: auto;
+     margin-right: auto;
     }
     .row{
       width: 50%;

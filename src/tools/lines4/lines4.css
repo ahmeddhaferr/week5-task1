@@ -1,4 +1,4 @@
-.line {
+.line4 {
     margin: auto;
     margin-top: 80px;
     width: 196px;
@@ -10,7 +10,7 @@
   #on {
     background-color: #3c97af;
   }
-  .flex {
+  .flex4 {
     gap: 5px;
     display: flex;
   }
