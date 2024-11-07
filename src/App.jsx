@@ -9,12 +9,6 @@ import FourthRBox from "./Components/fourthRBox/fourthRBox";
 function App() {
   return (
     <>
-      {/* <div className="main"> 
-       <LeftBox /> 
-      <RightBox /> 
-       <SecRightBox />
-       <ThirdRightBox/> </div> */}
-
       <Router>
         <Routes>
           <Route
