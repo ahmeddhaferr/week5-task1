@@ -6,12 +6,14 @@ const RightBox = () => {
 
   return (
     <div className="right-box1">
-      <Lines />
+    <Lines/>
+
       <div className="started1">
         <h1>Let’s Get started!</h1>
         <p>How do you plan to use this platform</p>
       </div>
       <Cards />
+
     </div>
   );
 };

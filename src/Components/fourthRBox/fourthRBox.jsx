@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import "./fourthRBox.css";
+import Lines from "../../tools/lines/lines";
 import Eye from "../../assets/eye.svg";
 import Eyeof from "../../assets/eyeof.svg";
-import Lines4 from "../../tools/lines4/lines4.jsx";
+import { Link } from "react-router-dom";
 
 export default function fourthRBox() {
   const [chng, setChng] = useState(false);
@@ -12,15 +13,15 @@ export default function fourthRBox() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [inputType, setInputType] = useState('password');
-
+  const [inputType, setInputType] = useState("password");
 
   const changeType = () => {
-    setInputType(type => (type === 'password' ? 'text' : 'password'));}
+    setInputType((type) => (type === "password" ? "text" : "password"));
+  };
 
   return (
     <div className="right-box4">
-      <Lines4 />
+      <Lines/>
       <div className="started4">
         <h1>Enter Your Information</h1>
         <p>
@@ -58,7 +59,7 @@ export default function fourthRBox() {
         <div className="pos">
           <p className="pp">Password</p>
           <input
-          id="pss"
+            id="pss"
             value={password}
             type={inputType}
             className={`iinput ${chng2 ? "ax" : ""}`}
@@ -68,16 +69,20 @@ export default function fourthRBox() {
             placeholder="Enter Password"
             typeof="Password"
           />
-          <button className="pass" onClick={changeType}  > <img src={`${inputType == "text" ? Eye: Eyeof}`} /></button>
+          <button className="pass" onClick={changeType}>
+            {" "}
+            <img src={`${inputType == "text" ? Eye : Eyeof}`} />
+          </button>
         </div>
-
-        <button
-          className={`bttnn ${
-            name !== "" && email !== "" && password.length > 7 ? "btnn2" : ""
-          }`}
-        >
-          <p className="p1">Complete registration </p>
-        </button>
+        <Link to="/Main$Paige">
+          <button
+            className={`bttnn ${
+              name !== "" && email !== "" && password.length > 7 ? "btnn2" : ""
+            }`}
+          >
+            <p className="p1">Complete registration </p>
+          </button>
+        </Link>
       </div>
     </div>
   );

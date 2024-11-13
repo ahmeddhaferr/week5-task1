@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./pinnum.css";
 import clock from "../../assets/clock.svg";
-import { Link } from "react-router-dom";
+import useStore from "../../zustand/main-store";
 
 export default function Pinnum() {
   const [pin, setPin] = useState(["", "", "", "", "", ""]);
   const [timeLeft, setTimeLeft] = useState(59);
   const [changer, setChanger] = useState(false);
+  const {num,setNum} =useStore()
+
 
   const handleChange = (e, index) => {
     const { value } = e.target;
@@ -56,6 +58,8 @@ export default function Pinnum() {
     if (!changer) {
       event.preventDefault();
       return;
+    }else {
+      setNum(num+1)
     }
   };
 
@@ -100,14 +104,12 @@ export default function Pinnum() {
       </div>
 
       <div>
-        <Link to={"/page3"}>
           <button
             className={`bbttn ${changer ? "btnact" : ""}`}
             onClick={handleClick}
           >
             <p className="p1">Verify</p>
           </button>
-        </Link>
       </div>
     </>
   );

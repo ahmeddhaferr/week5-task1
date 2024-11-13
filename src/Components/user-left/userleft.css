@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
+
+.user-left-container {
+  max-width: 320px;
+}
+.user-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-left-box1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 199px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px #21868e1f;
+}
+.user-left-box1 h1 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+}
+.user-left-box1 button {
+  width: 300px;
+  height: 40px;
+  padding: 8px 10px 8px 10px;
+  gap: 16px;
+  border-radius: 18px;
+  border: none;
+  background-color: #3c97af;
+  color: white;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user-left-box2 {
+  padding: 12px 16px;
+  margin-top: 10px;
+  width: 288px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px #21868e1f;
+}
+.feles {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.feles button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.user-left-box2 h1 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+  text-align: left;
+}
+.user-left-box2 p {
+  width: 288px;
+  height: 84px;
+  margin-top: 16px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-left-box3 {
+  padding: 12px 16px;
+  margin-top: 16px;
+  width: 288px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px #21868e1f;
+}
+.mrg-r-32px {
+  margin-right: 32px;
+}
+.feles1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.feles1 h1 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+  text-align: center;
+}
+.feles1 button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.feles2 {
+    margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.big-dot {
+  height: 12px;
+  width: 12px;
+  background-color: #3c97af;
+  border-radius: 50%;
+}
+.green-line {
+  margin-top: 4px;
+  background-color: #3c97af;
+  height: 98px;
+  width: 2px;
+}
+.dot-container {
+  width: 12px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.proj-name {
+  margin-left: 12px;
+}
+.proj-name h1 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.proj-name h6 {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #999999;
+  margin-top: 4px;
+}
+.proj-name p {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 12px;
+}

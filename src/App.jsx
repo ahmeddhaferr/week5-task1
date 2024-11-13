@@ -1,56 +1,36 @@
 import "./App.css";
 import LeftBox from "./Components/leftbox/left_box";
-import RightBox from "./Components/rightbox/right_box";
-import SecRightBox from "./Components/secrightbox/SecRightBox";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import ThirdRightBox from "../src/Components/thirdRightbox/ThirdRightBox";
-import FourthRBox from "./Components/fourthRBox/fourthRBox";
+import Selector from "./Components/selector/selector";
+import MainUser from "./Components/main-user/main-user";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route
+        <Route
             path="/"
             element={
               <div className="main">
                 <LeftBox />
-                <RightBox />
-              </div>
-            }
-          />
-          <Route
-            path="/page1"
-            element={
-              <div className="main">
-                <LeftBox />
-                <SecRightBox />
-              </div>
-            }
-          />
+                <div>
+                <Selector />
+                </div>
+                
 
-          <Route
-            path="/page2"
-            element={
-              <div className="main">
-                <LeftBox />
-                <ThirdRightBox />
-              </div>
-            }
-          />
 
-          <Route
-            path="/page3"
-            element={
-              <div className="main">
-                <LeftBox />
-                <FourthRBox />
               </div>
             }
           />
+          <Route   path="/Main$Paige"
+            element={
+              <MainUser/>
+            }     />
+
         </Routes>
       </Router>
+    
     </>
   );
 }
