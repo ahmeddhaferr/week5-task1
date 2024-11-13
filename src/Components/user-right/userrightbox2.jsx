@@ -1,8 +1,8 @@
 import React from "react";
 import "./userrightbox2.css";
-import Stars_6 from "../../assets/stars/Stars(6.0).svg";
-import Stars_7 from "../../assets/stars/Stars(7.0).svg";
-import Stars_8 from "../../assets/stars/Stars(8.0).svg";
+import Stars_6 from "../../assets/stars/stars(6.0).svg";
+import Stars_7 from "../../assets/stars/stars(7.0).svg";
+import Stars_8 from "../../assets/stars/stars(8.0).svg";
 import Poto4 from "../../assets/photos/poto4.svg";
 import Poto5 from "../../assets/photos/poto5.svg";
 import Poto6 from "../../assets/photos/poto6.svg";
