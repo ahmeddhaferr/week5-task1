@@ -1,12 +1,12 @@
 import React from "react";
 import "./notifications.css";
-import Poto1 from "../../assets/potos/Poto1.svg";
-import Poto2 from "../../assets/potos/Poto2.svg";
-import Poto3 from "../../assets/potos/Poto3.svg";
-import Poto4 from "../../assets/potos/Poto4.svg";
-import Poto5 from "../../assets/potos/Poto5.svg";
-import Poto6 from "../../assets/potos/Poto6.svg";
-import Poto7 from "../../assets/potos/Poto7.svg";
+import Poto1 from "../../assets/photos/Poto1.svg";
+import Poto2 from "../../assets/photos/Poto2.svg";
+import Poto3 from "../../assets/photos/Poto3.svg";
+import Poto4 from "../../assets/photos/Poto4.svg";
+import Poto5 from "../../assets/photos/Poto5.svg";
+import Poto6 from "../../assets/photos/Poto6.svg";
+import Poto7 from "../../assets/photos/Poto7.svg";
 
 export default function notifications() {
   return (
