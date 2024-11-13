@@ -1,6 +1,6 @@
 import React from "react";
 import "./notifications.css";
-import Poto1 from "../../assets/photos/Poto1.svg";
+import Poto1 from "../../assets/photos/poto1.svg";
 import Poto2 from "../../assets/photos/Poto2.svg";
 import Poto3 from "../../assets/photos/Poto3.svg";
 import Poto4 from "../../assets/photos/Poto4.svg";
