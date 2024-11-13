@@ -3,11 +3,11 @@ import "./userrightbox2.css";
 import Stars_6 from "../../assets/stars/Stars(6.0).svg";
 import Stars_7 from "../../assets/stars/Stars(7.0).svg";
 import Stars_8 from "../../assets/stars/Stars(8.0).svg";
-import Poto4 from "../../assets/photos/Poto4.svg";
-import Poto5 from "../../assets/photos/Poto5.svg";
-import Poto6 from "../../assets/photos/Poto6.svg";
-import Poto7 from "../../assets/photos/Poto7.svg";
-import Poto8 from "../../assets/photos/Poto8.svg";
+import Poto4 from "../../assets/photos/poto4.svg";
+import Poto5 from "../../assets/photos/poto5.svg";
+import Poto6 from "../../assets/photos/poto6.svg";
+import Poto7 from "../../assets/photos/poto7.svg";
+import Poto8 from "../../assets/photos/poto8.svg";
 export default function userrightbox2() {
   return (
     <div className="user-right-box2">
