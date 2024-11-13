@@ -4,15 +4,52 @@ import MustafaL from "../../assets/main-potos/mustafaemadL.svg";
 import Stars5_0 from "../../assets/stars/stars(5.0).svg";
 import EditPen from "../../assets/editpen.svg";
 import Cross from "../../assets/cross.svg";
+import { useState } from "react";
 export default function UserLeft() {
+  const [userName, setUserName] = useState("Mustafa Emad");
+  const [isEditing, setIsEditing] = useState(false); // controls edit mode
+
+  // Handles the input change
+  const handleInputChange = (event) => {
+    setUserName(event.target.value);
+  };
+
+  // Toggles the edit mode
+  const toggleEditMode = () => {
+    setIsEditing((prev) => !prev);
+  };
+
+  // Handles pressing Enter to confirm the name
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      setIsEditing(false);
+    }
+  };
+
+
   return (
     <div className="user-left-container">
       <div className="user-left-content">
         <div className="user-left-box1">
           <img src={MustafaL} />
-          <h1>Mustafa Emad</h1>
+          <h1>
+            {" "}
+            {isEditing ? (
+              <input className="edit-show"
+                type="text"
+                value={userName}
+                onChange={handleInputChange}
+                onKeyPress={handleKeyPress}
+                onBlur={() => setIsEditing(false)} // closes edit mode on blur
+                autoFocus
+              />
+            ) : (
+              <span onClick={toggleEditMode}>{userName}</span> // shows name as text when not editing
+            )}
+          </h1>
           <img src={Stars5_0} />
-          <button>Edit Profile</button>
+          <button onClick={toggleEditMode}>
+          Edit Profile</button>
         </div>
         <div className="user-left-box2">
           <div className="feles">

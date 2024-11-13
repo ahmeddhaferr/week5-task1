@@ -28,6 +28,20 @@
   line-height: 20px;
   text-align: left;
 }
+
+.edit-show{
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  border: none;
+  background-color: white;
+}
+.edit-show:focus{
+  outline: none;
+}
+
 .user-left-box1 button {
   width: 300px;
   height: 40px;
