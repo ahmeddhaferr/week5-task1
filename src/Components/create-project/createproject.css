@@ -1,7 +1,7 @@
 .main-create {
-    margin-top: 74px;
-margin-left: auto;
-margin-right: auto;
+  margin-top: 74px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 24px;
   width: 592px;
   background-color: #f8fbfc;
@@ -9,12 +9,79 @@ margin-right: auto;
   border-radius: 24px;
 }
 .overlay {
-  
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    background: #00000033;
-
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: #00000033;
 }
+.felosoo-main {
+  display: flex;
+  justify-content: space-between;
+}
+.felosoo-main h1 {
+  font-family: Nunito Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43.65px;
+  text-align: left;
+}
+.felosoo-main button {
+  height: 44px;
+  width: 44px;
+  background-color:#FFE5E5;
+  border: 1px solid #EB0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ .veno-main h1{
+  margin-top: 40px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+ }
+ .veno-main h2{
+  margin-top: 16px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+ }
+ .selection{
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+margin-top: 8px;
+  position: relative;
+  height: 48px;
+  width: 582px;
+  border: 1px solid #BFBFBF;
+  border-radius: 8px;
+  color: #d9d9d9;
+ }
+ .selection:focus , .selection:active {
+  border: 1px solid #3C97AF;
+  outline: none;
+ }
+ .selection p{
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+ }
+ .selection img{
+position: absolute;
+cursor: pointer;
+top: 60px;
+right: 21px;
+ }

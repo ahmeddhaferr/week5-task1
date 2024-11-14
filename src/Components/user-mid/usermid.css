@@ -2,6 +2,7 @@
 
 .user-mid-container {
   max-width: 616px;
+  position: relative;
 }
 .user-mid-content {
   display: flex;
@@ -36,7 +37,7 @@
   outline: none;
 }
 
-.blocat button {
+.poton {
   cursor: pointer;
   width: 32px;
   height: 32px;

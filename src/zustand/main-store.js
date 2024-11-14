@@ -8,7 +8,14 @@ const useStore = create((set) => ({
   showButton: false,
   arrowImage: x[0],
   count: 0,
-  num:0,
+  num: 0,
+  proj: false,
+
+  setProj: (proj) => set({ proj }),
+  setNum: (num) => set({ num }),
+
+  toggleProj: () => set((state) => ({ proj: !state.proj })),
+
   handleDivClick: () =>
     set(() => ({
       showButton: true,
@@ -24,9 +31,6 @@ const useStore = create((set) => ({
 
       return Count(1);
     }),
-
-setNum:(num)=>set({num})
-
 }));
 
 export default useStore;

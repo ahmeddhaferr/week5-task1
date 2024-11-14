@@ -9,40 +9,39 @@ import Likeon from "../../assets/likeon.svg";
 import Comment from "../../assets/comment.svg";
 import CreateProject from "../create-project/createproject.jsx";
 import { useState } from "react";
-
-
-
+import useStore from "../../zustand/main-store.js";
 
 export default function UserMid() {
-const [likes1,setLikes1] = useState(false)
-const [likes2,setLikes2] = useState(false)
-const [likes3,setLikes3] = useState(false)
+  const [likes1, setLikes1] = useState(false);
+  const [likes2, setLikes2] = useState(false);
+  const [likes3, setLikes3] = useState(false);
 
-const toggleLike1 =()=>{
-  setLikes1(!likes1)
-}
-const toggleLike2 =()=>{
-  setLikes2(!likes2)
-}
-const toggleLike3 =()=>{
-  setLikes3(!likes3)
-}
+  const toggleLike1 = () => {
+    setLikes1(!likes1);
+  };
+  const toggleLike2 = () => {
+    setLikes2(!likes2);
+  };
+  const toggleLike3 = () => {
+    setLikes3(!likes3);
+  };
 
+  const toggleProj = useStore((state)=> state.toggleProj);
+  const proj = useStore((state)=> state.proj);
+  
 
   return (
     <div className="user-mid-container">
+      {proj && <CreateProject />}
       <div className="user-mid-content">
         <div className="user-mid-box1">
           <img src={small} alt="" />
 
           <div className="blocat">
             <input type="text" placeholder="Mustafa Let’s Create a Project !" />
-            <button>
+            <button className="poton" onClick={toggleProj}>
               <img src={crosswhite} alt="" />
             </button>
-
-<CreateProject/>
-
           </div>
         </div>
 
@@ -129,8 +128,8 @@ const toggleLike3 =()=>{
 
             <div className="bottom-post">
               <div className="mid-row">
-              <button onClick={toggleLike2}>
-              <img src={`${likes2 ? Likeon : Like}`} alt="" />
+                <button onClick={toggleLike2}>
+                  <img src={`${likes2 ? Likeon : Like}`} alt="" />
                 </button>{" "}
                 <p onClick={toggleLike2}>like</p>
               </div>
@@ -181,8 +180,8 @@ const toggleLike3 =()=>{
 
             <div className="bottom-post">
               <div className="mid-row">
-              <button onClick={toggleLike3}>
-              <img src={`${likes3 ? Likeon : Like}`} alt="" />
+                <button onClick={toggleLike3}>
+                  <img src={`${likes3 ? Likeon : Like}`} alt="" />
                 </button>{" "}
                 <p onClick={toggleLike3}>like</p>
               </div>
