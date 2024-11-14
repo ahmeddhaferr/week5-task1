@@ -41,6 +41,20 @@
 .edit-show:focus{
   outline: none;
 }
+.edit-show1{
+  width: 288px;
+  height: 84px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #999999;
+  border: none;
+}
+.edit-show1:focus{
+outline: none;
+}
 
 .user-left-box1 button {
   width: 300px;

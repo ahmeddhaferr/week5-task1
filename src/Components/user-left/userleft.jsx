@@ -6,26 +6,36 @@ import EditPen from "../../assets/editpen.svg";
 import Cross from "../../assets/cross.svg";
 import { useState } from "react";
 export default function UserLeft() {
+  const speech = "GreenTech Solutions Inc. Renewable Energy & Technology San Francisco, California, with operations in North America and Europe"
   const [userName, setUserName] = useState("Mustafa Emad");
-  const [isEditing, setIsEditing] = useState(false); // controls edit mode
+  const [about, setAbout] = useState(speech);
+  const [isEditing, setIsEditing] = useState(false);
+  const [isEditinga, setIsEditinga] = useState(false);
 
-  // Handles the input change
   const handleInputChange = (event) => {
     setUserName(event.target.value);
   };
+  const handleInputChangeAbout = (event) => {
+    setAbout(event.target.value);
+  };
 
-  // Toggles the edit mode
   const toggleEditMode = () => {
     setIsEditing((prev) => !prev);
   };
+  const toggleEditModeAbout = () => {
+    setIsEditinga((prev) => !prev);
+  };
 
-  // Handles pressing Enter to confirm the name
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       setIsEditing(false);
     }
   };
-
+  const handleKeyPressAbout = (event) => {
+    if (event.key === "Enter") {
+      setIsEditinga(false);
+    }
+  };
 
   return (
     <div className="user-left-container">
@@ -33,35 +43,44 @@ export default function UserLeft() {
         <div className="user-left-box1">
           <img src={MustafaL} />
           <h1>
-            {" "}
             {isEditing ? (
-              <input className="edit-show"
+              <input
+                className="edit-show"
                 type="text"
                 value={userName}
                 onChange={handleInputChange}
                 onKeyPress={handleKeyPress}
-                onBlur={() => setIsEditing(false)} // closes edit mode on blur
+                onBlur={() => setIsEditing(false)}
                 autoFocus
               />
             ) : (
-              <span onClick={toggleEditMode}>{userName}</span> // shows name as text when not editing
+              <span onClick={toggleEditMode}>{userName}</span>
             )}
           </h1>
           <img src={Stars5_0} />
-          <button onClick={toggleEditMode}>
-          Edit Profile</button>
+          <button onClick={toggleEditMode}>Edit Profile</button>
         </div>
         <div className="user-left-box2">
           <div className="feles">
             <h1>About</h1>
-            <button>
-              {" "}
+            <button onClick={toggleEditModeAbout}>
               <img src={EditPen} />
             </button>
           </div>
           <p>
-            GreenTech Solutions Inc. Renewable Energy & Technology San
-            Francisco, California, with operations in North America and Europe
+          {isEditinga ? (
+              <input
+                className="edit-show1"
+                type="text"
+                value={about}
+                onChange={handleInputChangeAbout}
+                onKeyPress={handleKeyPressAbout}
+                onBlur={() => setIsEditinga(false)}
+                autoFocus
+              />
+            ) : (
+              <span onClick={toggleEditModeAbout}>{about}</span>
+            )}
           </p>
         </div>
         <div className="user-left-box3">
