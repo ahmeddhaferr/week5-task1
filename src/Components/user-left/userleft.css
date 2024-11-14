@@ -21,6 +21,9 @@
   border-radius: 12px;
   box-shadow: 0px 2px 8px 0px #21868e1f;
 }
+#prof-pic{
+  cursor: pointer;
+}
 .user-left-box1 h1 {
   font-family: Poppins;
   font-size: 16px;

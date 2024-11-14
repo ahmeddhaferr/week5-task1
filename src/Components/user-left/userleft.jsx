@@ -41,7 +41,7 @@ export default function UserLeft() {
     <div className="user-left-container">
       <div className="user-left-content">
         <div className="user-left-box1">
-          <img src={MustafaL} />
+          <img id="prof-pic" src={MustafaL} />
           <h1>
             {isEditing ? (
               <input
