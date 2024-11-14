@@ -1,0 +1,20 @@
+.main-create {
+    margin-top: 74px;
+margin-left: auto;
+margin-right: auto;
+  padding: 24px;
+  width: 592px;
+  background-color: #f8fbfc;
+  box-shadow: 1px 2px 8px 0px #21868e40;
+  border-radius: 24px;
+}
+.overlay {
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: #00000033;
+
+}

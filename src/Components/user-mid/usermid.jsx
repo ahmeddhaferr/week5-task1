@@ -7,7 +7,12 @@ import Coding from "../../assets/coding.svg";
 import Like from "../../assets/like.svg";
 import Likeon from "../../assets/likeon.svg";
 import Comment from "../../assets/comment.svg";
+import CreateProject from "../create-project/createproject.jsx";
 import { useState } from "react";
+
+
+
+
 export default function UserMid() {
 const [likes1,setLikes1] = useState(false)
 const [likes2,setLikes2] = useState(false)
@@ -35,6 +40,9 @@ const toggleLike3 =()=>{
             <button>
               <img src={crosswhite} alt="" />
             </button>
+
+<CreateProject/>
+
           </div>
         </div>
 
