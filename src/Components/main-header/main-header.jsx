@@ -7,17 +7,10 @@ import Bellon from "../../assets/bellon.svg";
 import Notifications from "../notifications/notifications.jsx";
 import { useState } from "react";
 export default function mainHeader() {
-  const [bellBtn, setBellBtn] = useState(false);
-  const [notif, setNotif] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  const handleclickNotification = () => {
-    if (bellBtn == false) {
-      setBellBtn(true);
-      setNotif(true);
-    } else {
-      setBellBtn(false);
-      setNotif(false);
-    }
+  const toggleModal = () => {
+    setModal(!modal);
   };
 
   return (
@@ -44,17 +37,15 @@ export default function mainHeader() {
               </button>
             </div>
             <div className="main-user-notifications">
-              <button onClick={handleclickNotification}>
-                <img src={`${bellBtn == true ? Bellon : Bell}`} />
+              <button onClick={toggleModal}>
+                <img src={`${modal == true ? Bellon : Bell}`} />
               </button>
               <div
                 className={`blue-dot ${
-                  bellBtn == true ? "blue-dot-off" : "blue-dot"
+                  modal == true ? "blue-dot-off" : "blue-dot"
                 }`}
               ></div>
-              <div className={`off ${bellBtn == true ? "on" : "off"}`}>
-                <Notifications />
-              </div>
+              {modal && <Notifications />}
             </div>
           </div>
         </div>

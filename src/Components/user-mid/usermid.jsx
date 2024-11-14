@@ -5,9 +5,25 @@ import crosswhite from "../../assets/crosswhite.svg";
 import Dots from "../../assets/dots.svg";
 import Coding from "../../assets/coding.svg";
 import Like from "../../assets/like.svg";
+import Likeon from "../../assets/likeon.svg";
 import Comment from "../../assets/comment.svg";
-
+import { useState } from "react";
 export default function UserMid() {
+const [likes1,setLikes1] = useState(false)
+const [likes2,setLikes2] = useState(false)
+const [likes3,setLikes3] = useState(false)
+
+const toggleLike1 =()=>{
+  setLikes1(!likes1)
+}
+const toggleLike2 =()=>{
+  setLikes2(!likes2)
+}
+const toggleLike3 =()=>{
+  setLikes3(!likes3)
+}
+
+
   return (
     <div className="user-mid-container">
       <div className="user-mid-content">
@@ -53,10 +69,10 @@ export default function UserMid() {
             <img src={Coding} alt="" />
             <div className="bottom-post">
               <div className="mid-row">
-                <button>
-                  <img src={Like} alt="" />
+                <button onClick={toggleLike1}>
+                  <img src={`${likes1 ? Likeon : Like}`} alt="" />
                 </button>{" "}
-                <p>like</p>
+                <p onClick={toggleLike1}>like</p>
               </div>
               <div className="mid-row">
                 <button>
@@ -67,7 +83,7 @@ export default function UserMid() {
             </div>
           </div>
         </div>
-        <div className="user-mid-box2">
+        <div className="user-mid-box3">
           <div className="user-felos">
             <div className="felos">
               <div className="circle-poto"></div>
@@ -105,10 +121,10 @@ export default function UserMid() {
 
             <div className="bottom-post">
               <div className="mid-row">
-                <button>
-                  <img src={Like} alt="" />
+              <button onClick={toggleLike2}>
+              <img src={`${likes2 ? Likeon : Like}`} alt="" />
                 </button>{" "}
-                <p>like</p>
+                <p onClick={toggleLike2}>like</p>
               </div>
               <div className="mid-row">
                 <button>
@@ -119,7 +135,7 @@ export default function UserMid() {
             </div>
           </div>
         </div>
-        <div className="user-mid-box2">
+        <div className="user-mid-box4">
           <div className="user-felos">
             <div className="felos">
               <div className="circle-poto"></div>
@@ -157,10 +173,10 @@ export default function UserMid() {
 
             <div className="bottom-post">
               <div className="mid-row">
-                <button>
-                  <img src={Like} alt="" />
+              <button onClick={toggleLike3}>
+              <img src={`${likes3 ? Likeon : Like}`} alt="" />
                 </button>{" "}
-                <p>like</p>
+                <p onClick={toggleLike3}>like</p>
               </div>
               <div className="mid-row">
                 <button>
