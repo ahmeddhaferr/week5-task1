@@ -31,57 +31,114 @@
 .felosoo-main button {
   height: 44px;
   width: 44px;
-  background-color:#FFE5E5;
-  border: 1px solid #EB0000;
+  background-color: #ffe5e5;
+  border: 1px solid #eb0000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
- .veno-main h1{
+.veno-main h1 {
   margin-top: 40px;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   text-align: left;
- }
- .veno-main h2{
+}
+.veno-main h2 {
   margin-top: 16px;
   font-family: Poppins;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   text-align: left;
- }
- .selection{
-  cursor: pointer;
+}
+.selection {
   padding-left: 10px;
   padding-top: 13px;
   padding-bottom: 13px;
-margin-top: 8px;
+  margin-top: 8px;
   position: relative;
-  height: 48px;
+  height: 22px;
   width: 582px;
-  border: 1px solid #BFBFBF;
+  border: 1px solid #bfbfbf;
   border-radius: 8px;
   color: #d9d9d9;
- }
- .selection:focus , .selection:active {
-  border: 1px solid #3C97AF;
+}
+.selection:focus,
+.selection:active {
+  border: 1px solid #3c97af;
   outline: none;
- }
- .selection p{
+}
+.selection-act {
+  padding-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-top: 8px;
+  position: relative;
+  height: 22px;
+  width: 582px;
+  border-radius: 8px;
+  color: #d9d9d9;
+  border: 1px solid #3c97af;
+}
+.selection p {
   font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   text-align: left;
- }
- .selection img{
-position: absolute;
-cursor: pointer;
-top: 60px;
-right: 21px;
- }
+}
+.selection-active {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #3c97af;
+}
+.selection img {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 21px;
+}
+.selection-act img {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 21px;
+}
+.white-board {
+  width: auto;
+  background-color: white;
+  height: 140px;
+  position: absolute;
+  top: 60px;
+}
+.drop-down-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: 8px;
+  gap: 12px;
+  width: 572px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 1px 2px 8px 0px #21868e1f;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  border-radius: 8px;
+  top: 58px;
+  left:0px;
+  color: #999999;
+}
+.drop-down-class p:hover {
+  cursor: pointer;
+  color: #3c97af;
+}

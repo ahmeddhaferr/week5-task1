@@ -8,15 +8,19 @@ import { useState } from "react";
 import useStore from "../../zustand/main-store.js";
 
 export default function CreateProject() {
+  const toggleProj = useStore((state) => state.toggleProj);
+  const [drop, setDrop] = useState(false);
+  const Qualifications = [
+    "UIUX Designer",
+    "Back-end",
+    "Front-end",
+    "Mobile app",
+  ];
+  const [chosen, setChosen] = useState("");
 
-  const {proj,setProj} =useStore()
-
- 
-const toggleProj =()=>{
-  setProj(!proj)
-}
-
-
+  const handleDrop = () => {
+    setDrop(!drop);
+  };
 
   return (
     <>
@@ -33,19 +37,29 @@ const toggleProj =()=>{
           </div>
           <div className="veno-main">
             <h1>Select Required Qualifications</h1>
-              
-
-              <select name="" id="" className="selection">
-              <p>Select option</p>
-              <img src={SelectArrow} alt="" />
-              <option value="" disabled selected hidden>Select option</option>
-                <option value=""> UIUX Designer</option>
-                <option value=""> Back-end</option>
-                <option value="">Front-end </option>
-                <option value=""> Mobile app</option>
-              </select>
+            <div className={`${chosen ? "selection-act":"selection"}`} onClick={handleDrop}>
+              <p className={`${chosen ? "selection-active":""}`}>{chosen ? chosen : "Select option"}</p>
+              <img
+                src={`${drop ? SelectGreenArrow : SelectArrow}`}
+                onClick={handleDrop}
+              />
+            </div>
+            {drop && (
+              <div className="drop-down-class">
+                {Qualifications.map((el) => (
+                  <p
+                    onClick={() => {
+                      setChosen(el);
+                    }}
+                  >
+                    {el}
+                  </p>
+                ))}
+              </div>
+            )}
 
             <h2>Description</h2>
+            <input type="text" />
           </div>
         </div>
       </div>
