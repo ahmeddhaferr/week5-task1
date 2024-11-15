@@ -1,5 +1,5 @@
 .main-create {
-  margin-top: 74px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 24px;
@@ -110,6 +110,8 @@
   cursor: pointer;
   top: 20px;
   right: 21px;
+
+
 }
 .white-board {
   width: auto;
