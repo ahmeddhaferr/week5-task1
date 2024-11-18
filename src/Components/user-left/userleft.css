@@ -54,6 +54,7 @@
   text-align: left;
   color: #999999;
   border: none;
+  resize: none;
 }
 .edit-show1:focus{
 outline: none;

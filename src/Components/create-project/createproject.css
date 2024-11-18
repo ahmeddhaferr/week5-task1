@@ -1,25 +1,25 @@
 .main-create {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 24px;
   width: 592px;
+  height: 710px;
   background-color: #f8fbfc;
   box-shadow: 1px 2px 8px 0px #21868e40;
   border-radius: 24px;
+  position: absolute;
+  left: -52px;
+  top: -20px;
+  z-index: 10;
 }
 .overlay {
   z-index: 4;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   position: fixed;
   background: #00000033;
 }
 .felosoo-main {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .felosoo-main h1 {
   font-family: Nunito Sans;
@@ -55,6 +55,40 @@
   line-height: 21px;
   text-align: left;
 }
+.veno-main .text-area {
+  margin-top: 8px;
+  width: 572px;
+  height: 187px;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  border: 1px solid #bfbfbf;
+  background-color: #f8fbfc;
+  resize: none;
+}
+.veno-main .text-area-on {
+  border: 1px solid #3c97af;
+}
+.veno-main .text-area:focus,
+.veno-main .text-area:focus {
+  outline: none;
+  border: 1px solid #3c97af;
+
+}
+
+.veno-main .text-area::placeholder {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #d9d9d9;
+}
+
 .selection {
   padding-left: 10px;
   padding-top: 13px;
@@ -110,8 +144,6 @@
   cursor: pointer;
   top: 20px;
   right: 21px;
-
-
 }
 .white-board {
   width: auto;
@@ -137,10 +169,66 @@
   line-height: 21px;
   border-radius: 8px;
   top: 58px;
-  left:0px;
+  left: 0px;
   color: #999999;
 }
 .drop-down-class p:hover {
   cursor: pointer;
   color: #3c97af;
+}
+
+.in-the-buttum {
+  margin-top: 210px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  left: 1px;
+  top: 442px;
+}
+.in-the-buttum button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #3c97af;
+  color: white;
+  font-family: Exo;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  width: 356px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.both-of-img {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 12px;
+}
+.onda-feles {
+  height: 56px;
+  width: 88px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3c97af;
+  background-color: white;
+  box-shadow: 0px 2px 12px 0px #3c97af14;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  border-radius: 16px;
+  gap: 4px;
 }

@@ -69,7 +69,7 @@ export default function UserLeft() {
           </div>
           <p>
           {isEditinga ? (
-              <input
+              <textarea
                 className="edit-show1"
                 type="text"
                 value={about}

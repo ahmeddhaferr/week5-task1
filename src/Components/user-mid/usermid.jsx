@@ -32,7 +32,6 @@ export default function UserMid() {
 
   return (
     <div className="user-mid-container">
-      {proj && <CreateProject />}
       <div className="user-mid-content">
         <div className="user-mid-box1">
           <img src={small} alt="" />
@@ -42,6 +41,7 @@ export default function UserMid() {
             <button className="poton" onClick={toggleProj}>
               <img src={crosswhite} alt="" />
             </button>
+            {proj && <CreateProject />}
           </div>
         </div>
 

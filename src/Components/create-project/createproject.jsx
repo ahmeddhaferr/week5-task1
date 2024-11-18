@@ -6,16 +6,23 @@ import SelectGreenArrow from "../../assets/selectgreenarrow.svg";
 import SelectArrow from "../../assets/selectarrow.svg";
 import { useState } from "react";
 import useStore from "../../zustand/main-store.js";
+import Arrow1 from "../../assets/arrow1.svg";
+import Media1 from "../../assets/media.svg";
+import Document1 from "../../assets/document.svg";
 
 export default function CreateProject() {
   const toggleProj = useStore((state) => state.toggleProj);
   const [drop, setDrop] = useState(false);
+  const [valona, setValona] = useState("");
   const Qualifications = [
     "UIUX Designer",
     "Back-end",
     "Front-end",
     "Mobile app",
   ];
+
+
+
   const [chosen, setChosen] = useState("");
 
   const handleDrop = () => {
@@ -24,43 +31,75 @@ export default function CreateProject() {
 
   return (
     <>
-      <div className="overlay">
-        <div className="main-create">
-          <div className="felosoo-main">
-            <h1> CreateProject</h1>
-            <button onClick={toggleProj}>
-              <img src={RedCross} alt="" />
-            </button>
-          </div>
-          <div>
-            <Stepper1 />
-          </div>
-          <div className="veno-main">
-            <h1>Select Required Qualifications</h1>
-            <div className={`${chosen ? "selection-act":"selection"}`} onClick={handleDrop}>
-              <p className={`${chosen ? "selection-active":""}`}>{chosen ? chosen : "Select option"}</p>
-              <img
-                src={`${drop ? SelectGreenArrow : SelectArrow}`}
-                onClick={handleDrop}
-              />
-            </div>
-            {drop && (
-              <div className="drop-down-class">
-                {Qualifications.map((el) => (
-                  <p
-                    onClick={() => {
-                      setChosen(el);
-                    }}
-                  >
-                    {el}
-                  </p>
-                ))}
-              </div>
-            )}
+      <div className="overlay" onClick={toggleProj}> </div>
 
-            <h2>Description</h2>
-            <input type="text" />
+      <div className="main-create">
+        <div className="felosoo-main">
+          <div className="in-the-buttum">
+            <div className="both-of-img">
+              <div className="onda-feles">
+                <img src={Media1} />
+                Media
+              </div>
+              <div className="onda-feles">
+                <img src={Document1} />
+                document
+              </div>
+            </div>
+            <div>
+              <button>
+                Next <img src={Arrow1} alt="" />
+              </button>
+            </div>
           </div>
+          <h1> CreateProject</h1>
+          <button onClick={toggleProj}>
+            <img src={RedCross} alt="" />
+          </button>
+        </div>
+        <div>
+          <Stepper1 />
+        </div>
+        <div className="veno-main">
+          <h1>Select Required Qualifications</h1>
+          <div
+            className={`${chosen ? "selection-act" : "selection"}`}
+            onClick={handleDrop}
+          >
+            <p className={`${chosen ? "selection-active" : ""}`}>
+              {chosen ? chosen : "Select option"}
+            </p>
+            <img
+              src={`${drop ? SelectGreenArrow : SelectArrow}`}
+              onClick={handleDrop}
+            />
+          </div>
+          {drop && (
+            <div className="drop-down-class">
+              {Qualifications.map((el) => (
+                <p
+                  onClick={() => {
+
+                    setChosen(el);
+                    setDrop(false)
+                  }}
+                >
+                  {el}
+                </p>
+              ))}
+            </div>
+          )}
+
+          <h2>Description</h2>
+          <textarea
+            value={valona}
+            onChange={()=>{
+              setValona()
+            }}
+            className={` text-area ${valona !== "" ? "text-area-on":"text-area"}`}
+            type="text"
+            placeholder="Enter Description for the project"
+          />
         </div>
       </div>
     </>
