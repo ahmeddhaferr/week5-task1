@@ -9,12 +9,14 @@ const useStore = create((set) => ({
   arrowImage: x[0],
   count: 0,
   num: 0,
+  num1:0,
   proj: false,
 
   setProj: (proj) => set({ proj }),
   setNum: (num) => set({ num }),
+  setNum1: (num1) => set({ num1 }),
 
-  toggleProj: () => set((state) => ({ proj: !state.proj })),
+  toggleProj: () => set((state) => ({ proj: !state.proj, num1: 0 })),
 
   handleDivClick: () =>
     set(() => ({

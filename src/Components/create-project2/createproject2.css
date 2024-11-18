@@ -1,0 +1,62 @@
+.main-create1 {
+  padding: 24px;
+  width: 592px;
+  height: 710px;
+  background-color: #f8fbfc;
+  box-shadow: 1px 2px 8px 0px #21868e40;
+  border-radius: 24px;
+  position: absolute;
+  left: -52px;
+  top: -20px;
+  z-index: 10;
+}
+.overlay1 {
+  z-index: 4;
+  inset: 0;
+  position: fixed;
+  background: #00000033;
+}
+
+.felosoo-main1 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.felosoo-main1 h1 {
+  font-family: Nunito Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43.65px;
+  text-align: left;
+}
+.close-button-red {
+  height: 44px;
+  width: 44px;
+  background-color: #ffe5e5;
+  border: 1px solid #eb0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.add-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  width: 592px;
+  height: 56px;
+  color: white;
+  background-color: #3c97af;
+  border: none;
+  border-radius: 16px;
+  top: 652px;
+  font-family: Exo;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  
+}

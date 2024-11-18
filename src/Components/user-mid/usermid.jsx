@@ -7,7 +7,7 @@ import Coding from "../../assets/coding.svg";
 import Like from "../../assets/like.svg";
 import Likeon from "../../assets/likeon.svg";
 import Comment from "../../assets/comment.svg";
-import CreateProject from "../create-project/createproject.jsx";
+import Selector2 from "../selectors/selector2.jsx";
 import { useState } from "react";
 import useStore from "../../zustand/main-store.js";
 
@@ -41,7 +41,7 @@ export default function UserMid() {
             <button className="poton" onClick={toggleProj}>
               <img src={crosswhite} alt="" />
             </button>
-            {proj && <CreateProject />}
+            {proj && <Selector2/>}
           </div>
         </div>
 

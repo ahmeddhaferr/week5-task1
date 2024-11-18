@@ -14,6 +14,7 @@ export default function CreateProject() {
   const toggleProj = useStore((state) => state.toggleProj);
   const [drop, setDrop] = useState(false);
   const [valona, setValona] = useState("");
+  const { num1, setNum1 } = useStore();
   const Qualifications = [
     "UIUX Designer",
     "Back-end",
@@ -21,7 +22,9 @@ export default function CreateProject() {
     "Mobile app",
   ];
 
-
+  const handleClick1 = () => {
+    setNum1(num1 + 1);
+  };
 
   const [chosen, setChosen] = useState("");
 
@@ -31,7 +34,8 @@ export default function CreateProject() {
 
   return (
     <>
-      <div className="overlay" onClick={toggleProj}> </div>
+      <div className="overlay" onClick={toggleProj}>
+      </div>
 
       <div className="main-create">
         <div className="felosoo-main">
@@ -47,7 +51,7 @@ export default function CreateProject() {
               </div>
             </div>
             <div>
-              <button>
+              <button onClick={handleClick1}>
                 Next <img src={Arrow1} alt="" />
               </button>
             </div>
@@ -79,9 +83,8 @@ export default function CreateProject() {
               {Qualifications.map((el) => (
                 <p
                   onClick={() => {
-
                     setChosen(el);
-                    setDrop(false)
+                    setDrop(false);
                   }}
                 >
                   {el}
@@ -93,10 +96,12 @@ export default function CreateProject() {
           <h2>Description</h2>
           <textarea
             value={valona}
-            onChange={()=>{
-              setValona()
+            onChange={() => {
+              setValona();
             }}
-            className={` text-area ${valona !== "" ? "text-area-on":"text-area"}`}
+            className={` text-area ${
+              valona !== "" ? "text-area-on" : "text-area"
+            }`}
             type="text"
             placeholder="Enter Description for the project"
           />

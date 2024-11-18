@@ -1,8 +1,8 @@
 import React from 'react'
 import RightBox from "../rightbox/right_box.jsx";
-import SecRightBox from "../secrightbox/SecRightBox";
-import ThirdRightBox from "../thirdRightbox/ThirdRightBox";
-import FourthRBox from "../fourthRBox/fourthRBox";
+import SecRightBox from "../secrightbox/SecRightBox.jsx";
+import ThirdRightBox from "../thirdRightbox/ThirdRightBox.jsx";
+import FourthRBox from "../fourthRBox/fourthRBox.jsx";
 import useStore from '../../zustand/main-store.js';
 
 export default function selector() {

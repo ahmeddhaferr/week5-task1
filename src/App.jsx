@@ -1,6 +1,6 @@
 import "./App.css";
 import LeftBox from "./Components/leftbox/left_box";
-import Selector from "./Components/selector/selector";
+import Selector from "./Components/selectors/selector1";
 import MainUser from "./Components/main-user/main-user";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
