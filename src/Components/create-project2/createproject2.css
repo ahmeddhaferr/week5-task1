@@ -58,5 +58,88 @@
   font-weight: 400;
   line-height: 24px;
   cursor: pointer;
-  
+}
+.underr-stepper {
+  margin-top: 40px;
+}
+.underr-stepper p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.underr-stepper input {
+  background-color: #f8fbfc;
+  margin-top: 8px;
+  padding: 13px 10px;
+  width: 96%;
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.underr-stepper input::placeholder {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #d9d9d9;
+}
+.fondos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.fondos-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 50%;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #d9d9d9;
+  cursor: pointer;
+}
+#m16 {
+  margin-top: 16px;
+}
+
+.colorado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 50%;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  background-color: #3c97af;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.homies p {
+  margin-top: 16px;
 }
