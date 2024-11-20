@@ -15,18 +15,22 @@ export default function CreateProject() {
   const [drop, setDrop] = useState(false);
   const [valona, setValona] = useState("");
   const { num1, setNum1 } = useStore();
+  const [chosen, setChosen] = useState("");
   const Qualifications = [
-    "UIUX Designer",
-    "Back-end",
-    "Front-end",
-    "Mobile app",
+    {id:1 , content:"UIUX Designer"},
+     {id:2 , content:"Back-end"},
+     {id:3 , content:"Front-end"},
+     {id:4 , content:"Mobile app"}
   ];
 
   const handleClick1 = () => {
-    setNum1(num1 + 1);
+    if (valona !== "" && chosen !== ""){
+      setNum1(num1 + 1);
+    }
+    else{
+      return
+    }
   };
-
-  const [chosen, setChosen] = useState("");
 
   const handleDrop = () => {
     setDrop(!drop);
@@ -34,8 +38,7 @@ export default function CreateProject() {
 
   return (
     <>
-      <div className="overlay" onClick={toggleProj}>
-      </div>
+      <div className="overlay" onClick={toggleProj}></div>
 
       <div className="main-create">
         <div className="felosoo-main">
@@ -81,13 +84,13 @@ export default function CreateProject() {
           {drop && (
             <div className="drop-down-class">
               {Qualifications.map((el) => (
-                <p
+                <p key={el.id}
                   onClick={() => {
-                    setChosen(el);
+                    setChosen(el.content);
                     setDrop(false);
                   }}
                 >
-                  {el}
+                  {el.content}
                 </p>
               ))}
             </div>
@@ -96,8 +99,8 @@ export default function CreateProject() {
           <h2>Description</h2>
           <textarea
             value={valona}
-            onChange={() => {
-              setValona();
+            onChange={(e) => {
+              setValona(e.target.value);
             }}
             className={` text-area ${
               valona !== "" ? "text-area-on" : "text-area"

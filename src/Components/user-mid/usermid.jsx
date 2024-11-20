@@ -37,7 +37,7 @@ export default function UserMid() {
           <img src={small} alt="" />
 
           <div className="blocat">
-            <input type="text" placeholder="Mustafa Let’s Create a Project !" />
+            <input type="text" placeholder="Mustafa Let’s Create a Project !" className="blocat-input"/>
             <button className="poton" onClick={toggleProj}>
               <img src={crosswhite} alt="" />
             </button>
