@@ -6,15 +6,11 @@ import EditPen from "../../assets/editpen.svg";
 import Cross from "../../assets/cross.svg";
 import { useState } from "react";
 export default function UserLeft() {
-  const speech = "GreenTech Solutions Inc. Renewable Energy & Technology San Francisco, California, with operations in North America and Europe"
-  const [userName, setUserName] = useState("Mustafa Emad");
+  const speech =
+    "GreenTech Solutions Inc. Renewable Energy & Technology San Francisco, California, with operations in North America and Europe";
   const [about, setAbout] = useState(speech);
-  const [isEditing, setIsEditing] = useState(false);
   const [isEditinga, setIsEditinga] = useState(false);
 
-  const handleInputChange = (event) => {
-    setUserName(event.target.value);
-  };
   const handleInputChangeAbout = (event) => {
     setAbout(event.target.value);
   };
@@ -26,11 +22,6 @@ export default function UserLeft() {
     setIsEditinga((prev) => !prev);
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      setIsEditing(false);
-    }
-  };
   const handleKeyPressAbout = (event) => {
     if (event.key === "Enter") {
       setIsEditinga(false);
@@ -42,24 +33,11 @@ export default function UserLeft() {
       <div className="user-left-content">
         <div className="user-left-box1">
           <img id="prof-pic" src={MustafaL} />
-          <h1>
-            {isEditing ? (
-              <input
-                className="edit-show"
-                type="text"
-                value={userName}
-                onChange={handleInputChange}
-                onKeyPress={handleKeyPress}
-                onBlur={() => setIsEditing(false)}
-                autoFocus
-              />
-            ) : (
-              <span onClick={toggleEditMode}>{userName}</span>
-            )}
-          </h1>
+          <h1>Mustafa Emad</h1>
           <img src={Stars5_0} />
           <button onClick={toggleEditMode}>Edit Profile</button>
         </div>
+
         <div className="user-left-box2">
           <div className="feles">
             <h1>About</h1>
@@ -68,7 +46,7 @@ export default function UserLeft() {
             </button>
           </div>
           <p>
-          {isEditinga ? (
+            {isEditinga ? (
               <textarea
                 className="edit-show1"
                 type="text"
